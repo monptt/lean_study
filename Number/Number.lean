@@ -13,3 +13,12 @@ def add (a : MyNat) (b : MyNat) : MyNat :=
 
 /-- 加法の記法 -/
 notation a "+" b => add a b
+
+/-- 零元 (n + 0 = n) -/
+example (n : MyNat) : add n MyNat.zero = n := by
+  induction n
+  case zero =>
+    rw [add]
+  case succ n =>
+    rw [add]
+    rw [n]
