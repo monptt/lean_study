@@ -8,3 +8,7 @@ name = "LeanStudy"
 [[lean_exe]]
 name = "lean_study"
 root = "Main"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
